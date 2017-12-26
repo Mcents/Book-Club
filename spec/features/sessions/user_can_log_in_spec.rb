@@ -12,7 +12,7 @@ RSpec.feature "A user can log into their account" do
     fill_in "session[password]", with: "thepassword"
     click_on "Login"
 
-    expect(page).to have_content("Book Club")
+    expect(page).to have_content("Sign Up")
 
   end
 end
