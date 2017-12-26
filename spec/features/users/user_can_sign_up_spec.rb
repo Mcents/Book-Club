@@ -10,7 +10,7 @@ RSpec.feature "An unauthenticated user can create an account" do
     fill_in "user[last_name]", with: "jones"
     click_on "Create Account"
 
-    expect(page).to have_content("Book Club")
+    expect(page).to have_content("Sign Up")
 
   end
 end
