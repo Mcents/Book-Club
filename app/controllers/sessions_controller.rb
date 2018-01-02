@@ -10,6 +10,10 @@ class SessionsController < ApplicationController
       session[:user_id] = @user.id
       flash[:notice] = "Successful Login"
       redirect_to root_path
+
+    else
+      flash[:notice] = "Invalid Credentials"
+      redirect_to new_login_path
     end
   end
 end

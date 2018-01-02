@@ -8,7 +8,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       flash[:notice] = "Welcome, #{@user.username}"
-      redirect_to root_path
+      redirect_to login_path
     else
       flash[:notice] = "Invalid Credentials"
       redirect_to new_user_path
