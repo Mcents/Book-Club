@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.feature "User can create a club" do
   scenario "when they are logged in" do
     
-    user = create(:user)
+					user = User.create(username: "mike", first_name: "Mike", last_name: "jon")
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
     visit "clubs/new"
