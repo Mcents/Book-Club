@@ -1,1 +1,2 @@
 <h1><%= @club.name %></h1>
+<%= button_to 'Join Club', join_club_path(@club.id), :method => :post%>

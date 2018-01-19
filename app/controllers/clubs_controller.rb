@@ -16,6 +16,12 @@ class ClubsController < ApplicationController
 		@club = Club.find(params[:id])
 	end
 
+	def join
+		@club = Club.find(params[:id])
+		current_user.clubs << @club
+		redirect_to @club
+	end
+
 	private
 
 	def club_params
