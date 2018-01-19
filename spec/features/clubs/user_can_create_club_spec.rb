@@ -13,6 +13,7 @@ RSpec.feature "User can create a club" do
 
     l_club = Club.last
 
-    expect(current_path).to eq(book_path(l_book))
+    expect(current_path).to eq(club_path(l_club))
+		expect(page).to have_content("Mikes Awesome Club")
   end
 end
