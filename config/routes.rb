@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: "users#new"
+  root to: "dashboard#show"
   resources :users
 	resources :clubs do
 		member do
