@@ -12,6 +12,10 @@ class ClubsController < ApplicationController
 		end
 	end
 
+	def index
+		@club = Club.all
+	end
+
 	def show
 		@club = Club.find(params[:id])
 	end
