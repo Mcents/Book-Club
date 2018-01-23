@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
   root to: "dashboard#show"
   resources :users
+	resources :books
+
+	resources :clubs do
+		resources :books
+	end
+	
 	resources :clubs do
 		member do
 			post :join
