@@ -5,6 +5,12 @@ class BooksController < ApplicationController
 		@book = Book.new()
 	end
 
+	def index
+		@club = Club.find(params[:club_id])
+		@books = @club.books
+		@book = Book.new
+	end
+
 	def create
 		@club = Club.find(params[:club_id])
 		@book = @club.books.new(book_params)

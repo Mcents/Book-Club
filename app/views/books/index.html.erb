@@ -1,0 +1,7 @@
+<%= @club.name %>
+
+<% @books.each do |book| %>
+	<%= book.title %>
+<% end %>
+
+<h3><%= link_to "create a book", new_club_book_path(@club, @book) %></h3>
