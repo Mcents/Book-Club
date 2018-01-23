@@ -1,4 +1,7 @@
 <h1>Welcome to Book Club</h1>
+<%= link_to "View Clubs", clubs_path %>
+<footer>
 <% unless current_user %>
-<%= link_to "Sign Up", new_user_path %>
+	<%= link_to "Sign Up", new_user_path %>
 <% end %>
+</footer>
