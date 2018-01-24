@@ -5,6 +5,7 @@ class ClubsController < ApplicationController
 
 	def create
 		@club = current_user.clubs.new(club_params)
+		@club.creator = current_user.username if current_user
 		if @club.save
 			redirect_to club_path(@club)
 		else
@@ -29,7 +30,7 @@ class ClubsController < ApplicationController
 	private
 
 	def club_params
-		params.require(:club).permit(:name, :description)
+		params.require(:club).permit(:name, :description, :creator)
 	end
 
 end
