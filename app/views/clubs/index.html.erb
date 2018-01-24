@@ -1,4 +1,4 @@
 <% @club.each do |f| %>
-	<%= f.name %>
+	<%= link_to f.name, club_path(f) %>
 	<%= f.description %>
 <% end %>
