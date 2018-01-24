@@ -3,8 +3,13 @@
 	<%= button_to 'Join Club', join_club_path(@club.id), :method => :post%>
 <% end %>
 
+<% if current_user.username == @club.creator %>
+	<%= link_to "Create Poll" %>
+<% end %>
+
 <%= link_to "View Books", club_books_path(@club) %>
 
 <% @club.books.each do |f| %>
 	<%= f.title %>
 <% end %>
+
