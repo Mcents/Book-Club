@@ -7,3 +7,7 @@ describe AmazonService do
 			b_info = AmazonService.new.isbn_info(9780143039945)
 
 			expect(b_info.class).to eq(Hash)
+			
+		end
+	end
+end
