@@ -11,6 +11,5 @@ RSpec.feature "An unauthenticated user can create an account" do
     click_on "Create Account"
 
     expect(page).to have_content("Login")
-
   end
 end
