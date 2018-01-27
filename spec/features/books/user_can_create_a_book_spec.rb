@@ -12,7 +12,6 @@ RSpec.feature "User can create a book" do
 		fill_in "book[author]", with: "Thomas Pynchon"
 		fill_in "book[description]", with: "This is a worldie of a book"
 		fill_in "book[isbn]", with: "978"
-		save_and_open_page
 
 		click_button "Create Book"
 

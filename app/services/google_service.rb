@@ -7,7 +7,7 @@ class GoogleService
 	end
 
 	def isbn_info(isbn)
-		g = parse(@conn.get("volumes?q=isbn#{isbn}&key=#{ENV['API_KEY']}"))
+		parse(@conn.get("volumes?q=isbn#{isbn}&key=#{ENV['API_KEY']}"))
 	end
 
 	def parse(response)
